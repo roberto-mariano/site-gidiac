@@ -26,281 +26,87 @@
     background:var(--branco);
   }
 
-  /* ===== BARRA LATERAL ===== */
   aside{
-    position:fixed;
-    top:0;
-    left:0;
-    width:var(--largura-lateral);
-    height:100vh;
-    background:var(--azul);
-    color:var(--branco);
-    overflow-y:auto;
-    border-right:4px solid var(--destaque);
-    display:flex;
-    flex-direction:column;
+    position:fixed; top:0; left:0;
+    width:var(--largura-lateral); height:100vh;
+    background:var(--azul); color:var(--branco);
+    overflow-y:auto; border-right:4px solid var(--destaque);
+    display:flex; flex-direction:column;
   }
   aside::-webkit-scrollbar{width:6px}
   aside::-webkit-scrollbar-track{background:var(--azul-escuro)}
   aside::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:3px}
 
-  .lateral-cabecalho{
-    padding:1.8rem 1.5rem 1.5rem;
-    border-bottom:1px solid rgba(255,255,255,.15);
+  .lateral-cabecalho{padding:1.8rem 1.5rem 1.5rem; border-bottom:1px solid rgba(255,255,255,.15)}
+  .link-hub{
+    display:inline-block; color:rgba(255,255,255,.75); text-decoration:none;
+    font-size:.8rem; margin-bottom:.9rem; border-bottom:1px solid rgba(255,255,255,.3);
+    padding-bottom:2px; font-family:Georgia,serif;
   }
-  .lateral-marca{
-    font-size:.72rem;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    opacity:.75;
-    margin-bottom:.6rem;
-    line-height:1.4;
-  }
-  .lateral-titulo{
-    font-size:1.05rem;
-    line-height:1.35;
-    font-weight:normal;
-    margin-bottom:.4rem;
-  }
-  .lateral-subtitulo{
-    font-size:.82rem;
-    opacity:.85;
-    font-style:italic;
-    line-height:1.4;
-  }
+  .link-hub:hover{color:var(--branco); border-color:var(--destaque)}
+  .lateral-marca{font-size:.72rem; letter-spacing:1.5px; text-transform:uppercase; opacity:.75; margin-bottom:.6rem; line-height:1.4}
+  .lateral-titulo{font-size:1.05rem; line-height:1.35; font-weight:normal; margin-bottom:.4rem}
+  .lateral-subtitulo{font-size:.82rem; opacity:.85; font-style:italic; line-height:1.4}
 
-  nav.lateral-nav{
-    padding:1rem 0;
-    flex:1;
-  }
+  nav.lateral-nav{padding:1rem 0; flex:1}
   nav.lateral-nav a{
-    display:block;
-    padding:.7rem 1.5rem;
-    color:var(--branco);
-    text-decoration:none;
-    font-family:Georgia, serif;
-    font-size:.92rem;
-    border-left:3px solid transparent;
-    transition:background .2s, border-color .2s;
-    opacity:.85;
+    display:block; padding:.7rem 1.5rem; color:var(--branco); text-decoration:none;
+    font-family:Georgia, serif; font-size:.92rem; border-left:3px solid transparent;
+    transition:background .2s, border-color .2s; opacity:.85;
   }
-  nav.lateral-nav a:hover{
-    background:rgba(255,255,255,.08);
-    opacity:1;
-  }
-  nav.lateral-nav a.ativo{
-    background:rgba(201,162,39,.15);
-    border-left-color:var(--destaque);
-    opacity:1;
-    font-weight:bold;
-  }
-  nav.lateral-nav .numero{
-    display:inline-block;
-    width:1.4rem;
-    color:var(--destaque);
-    font-size:.85rem;
-  }
+  nav.lateral-nav a:hover{background:rgba(255,255,255,.08); opacity:1}
+  nav.lateral-nav a.ativo{background:rgba(201,162,39,.15); border-left-color:var(--destaque); opacity:1; font-weight:bold}
+  nav.lateral-nav .numero{display:inline-block; width:1.4rem; color:var(--destaque); font-size:.85rem}
 
-  .lateral-rodape{
-    padding:1rem 1.5rem;
-    font-size:.75rem;
-    opacity:.7;
-    border-top:1px solid rgba(255,255,255,.15);
-    line-height:1.5;
-  }
+  .lateral-rodape{padding:1rem 1.5rem; font-size:.75rem; opacity:.7; border-top:1px solid rgba(255,255,255,.15); line-height:1.5}
 
-  /* ===== CONTEÚDO PRINCIPAL ===== */
-  main{
-    margin-left:var(--largura-lateral);
-    padding:2.5rem 3rem 4rem;
-    max-width:900px;
-  }
+  main{margin-left:var(--largura-lateral); padding:2.5rem 3rem 4rem; max-width:900px}
 
-  section{
-    margin-bottom:3.5rem;
-    scroll-margin-top:1rem;
-  }
-  section h2{
-    font-size:1.65rem;
-    color:var(--azul);
-    border-bottom:2px solid var(--destaque);
-    padding-bottom:.4rem;
-    margin-bottom:1.3rem;
-    font-weight:normal;
-  }
-  section h3{
-    font-size:1.18rem;
-    color:var(--azul);
-    margin-top:1.8rem;
-    margin-bottom:.7rem;
-    font-weight:bold;
-  }
-  section p{margin-bottom:1rem;text-align:justify}
-  section ul, section ol{
-    margin-left:1.5rem;
-    margin-bottom:1rem;
-  }
-  section li{margin-bottom:.5rem;text-align:justify}
+  section{margin-bottom:3.5rem; scroll-margin-top:1rem}
+  section h2{font-size:1.65rem; color:var(--azul); border-bottom:2px solid var(--destaque); padding-bottom:.4rem; margin-bottom:1.3rem; font-weight:normal}
+  section h3{font-size:1.18rem; color:var(--azul); margin-top:1.8rem; margin-bottom:.7rem; font-weight:bold}
+  section p{margin-bottom:1rem; text-align:justify}
+  section ul, section ol{margin-left:1.5rem; margin-bottom:1rem}
+  section li{margin-bottom:.5rem; text-align:justify}
 
-  .card-info{
-    background:var(--cinza-suave);
-    border-left:4px solid var(--azul);
-    padding:1.2rem 1.4rem;
-    margin:1.5rem 0;
-    border-radius:0 4px 4px 0;
-  }
+  .card-info{background:var(--cinza-suave); border-left:4px solid var(--azul); padding:1.2rem 1.4rem; margin:1.5rem 0; border-radius:0 4px 4px 0}
   .card-info strong{color:var(--azul)}
-  .card-alerta{
-    background:#fff8e6;
-    border-left:4px solid var(--destaque);
-    padding:1.2rem 1.4rem;
-    margin:1.5rem 0;
-    border-radius:0 4px 4px 0;
-  }
+  .card-alerta{background:#fff8e6; border-left:4px solid var(--destaque); padding:1.2rem 1.4rem; margin:1.5rem 0; border-radius:0 4px 4px 0}
 
-  .grid-etapas{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
-    gap:1rem;
-    margin:1.5rem 0;
-  }
-  .etapa{
-    background:var(--cinza-suave);
-    padding:1.2rem;
-    border-top:3px solid var(--azul);
-    border-radius:0 0 4px 4px;
-  }
-  .etapa .numero{
-    color:var(--destaque);
-    font-size:.8rem;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-bottom:.3rem;
-    font-weight:bold;
-  }
-  .etapa h4{
-    color:var(--azul);
-    font-size:1.02rem;
-    margin-bottom:.5rem;
-  }
-  .etapa p{font-size:.88rem;margin-bottom:.3rem}
-  .etapa .periodo{
-    font-size:.78rem;
-    color:var(--cinza);
-    margin-top:.6rem;
-    font-style:italic;
-  }
+  .grid-etapas{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:1rem; margin:1.5rem 0}
+  .etapa{background:var(--cinza-suave); padding:1.2rem; border-top:3px solid var(--azul); border-radius:0 0 4px 4px}
+  .etapa .numero{color:var(--destaque); font-size:.8rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:.3rem; font-weight:bold}
+  .etapa h4{color:var(--azul); font-size:1.02rem; margin-bottom:.5rem}
+  .etapa p{font-size:.88rem; margin-bottom:.3rem}
+  .etapa .periodo{font-size:.78rem; color:var(--cinza); margin-top:.6rem; font-style:italic}
 
-  table{
-    width:100%;
-    border-collapse:collapse;
-    margin:1rem 0 1.5rem;
-    font-size:.92rem;
-  }
-  th, td{
-    padding:.7rem .8rem;
-    border:1px solid var(--borda);
-    text-align:left;
-    vertical-align:top;
-  }
-  th{
-    background:var(--azul);
-    color:var(--branco);
-    font-weight:normal;
-    text-align:left;
-  }
+  table{width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:.92rem}
+  th, td{padding:.7rem .8rem; border:1px solid var(--borda); text-align:left; vertical-align:top}
+  th{background:var(--azul); color:var(--branco); font-weight:normal; text-align:left}
   tr:nth-child(even) td{background:var(--cinza-suave)}
 
-  .conceito-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-    gap:1rem;
-    margin:1.5rem 0;
-  }
-  .conceito{
-    padding:1rem 1.2rem;
-    background:var(--cinza-suave);
-    border-radius:4px;
-    border-left:3px solid var(--azul);
-  }
-  .conceito h4{
-    color:var(--azul);
-    font-size:.98rem;
-    margin-bottom:.4rem;
-  }
-  .conceito p{font-size:.87rem;line-height:1.55;margin-bottom:0}
+  .conceito-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin:1.5rem 0}
+  .conceito{padding:1rem 1.2rem; background:var(--cinza-suave); border-radius:4px; border-left:3px solid var(--azul)}
+  .conceito h4{color:var(--azul); font-size:.98rem; margin-bottom:.4rem}
+  .conceito p{font-size:.87rem; line-height:1.55; margin-bottom:0}
 
-  .papel{
-    display:flex;
-    gap:1.2rem;
-    padding:1rem 0;
-    border-bottom:1px solid var(--borda);
-  }
+  .papel{display:flex; gap:1.2rem; padding:1rem 0; border-bottom:1px solid var(--borda)}
   .papel:last-child{border-bottom:none}
-  .papel .icone{
-    width:38px;
-    height:38px;
-    background:var(--azul);
-    color:var(--branco);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    font-weight:bold;
-    font-size:.9rem;
-  }
-  .papel .desc h4{color:var(--azul);margin-bottom:.3rem;font-size:1rem}
-  .papel .desc p{font-size:.9rem;margin-bottom:0}
+  .papel .icone{width:38px; height:38px; background:var(--azul); color:var(--branco); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:bold; font-size:.9rem}
+  .papel .desc h4{color:var(--azul); margin-bottom:.3rem; font-size:1rem}
+  .papel .desc p{font-size:.9rem; margin-bottom:0}
 
-  .destaque-frase{
-    font-style:italic;
-    color:var(--cinza);
-    border-left:3px solid var(--destaque);
-    padding:.4rem 1rem;
-    margin:1.2rem 0;
-    font-size:.98rem;
-  }
+  .destaque-frase{font-style:italic; color:var(--cinza); border-left:3px solid var(--destaque); padding:.4rem 1rem; margin:1.2rem 0; font-size:.98rem}
 
-  /* ===== BOTÃO MOBILE ===== */
-  .btn-menu{
-    display:none;
-    position:fixed;
-    top:1rem;
-    left:1rem;
-    z-index:200;
-    background:var(--azul);
-    color:var(--branco);
-    border:none;
-    padding:.6rem .9rem;
-    border-radius:4px;
-    font-size:1.1rem;
-    cursor:pointer;
-    box-shadow:0 2px 8px rgba(0,0,0,.2);
-  }
-  .overlay-mobile{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.5);
-    z-index:99;
-  }
+  .btn-menu{display:none; position:fixed; top:1rem; left:1rem; z-index:200; background:var(--azul); color:var(--branco); border:none; padding:.6rem .9rem; border-radius:4px; font-size:1.1rem; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  .overlay-mobile{display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:99}
 
-  /* ===== RESPONSIVO ===== */
   @media (max-width:900px){
     .btn-menu{display:block}
-    aside{
-      transform:translateX(-100%);
-      transition:transform .3s ease;
-      z-index:150;
-      width:280px;
-    }
+    aside{transform:translateX(-100%); transition:transform .3s ease; z-index:150; width:280px}
     aside.aberta{transform:translateX(0)}
     .overlay-mobile.visivel{display:block}
-    main{
-      margin-left:0;
-      padding:4.5rem 1.5rem 3rem;
-    }
+    main{margin-left:0; padding:4.5rem 1.5rem 3rem}
     section h2{font-size:1.4rem}
   }
 </style>
@@ -312,6 +118,7 @@
 
 <aside id="lateral">
   <div class="lateral-cabecalho">
+    <a href="../" class="link-hub">&larr; GIDIAC</a>
     <div class="lateral-marca">UERN · PIBIC 2026/2027</div>
     <h1 class="lateral-titulo">Agentes de IA na Educação Matemática</h1>
     <div class="lateral-subtitulo">Framework analítico-pedagógico para a formação inicial docente</div>
@@ -346,39 +153,21 @@
     <p><strong>Natureza:</strong> pesquisa aplicada, qualitativa, exploratória e propositiva, conduzida sobre literatura científica indexada e documentos institucionais de domínio público. Não envolve coleta de dados com sujeitos humanos.</p>
   </div>
 
-  <p>A investigação alinha-se ao <strong>Objetivo de Desenvolvimento Sustentável 4 (Educação de Qualidade)</strong>, contribuindo particularmente para a qualificação docente. Vincula-se à agenda de pesquisa do Grupo Interdisciplinar de Desenvolvimento de Inteligência Artificial e Competências Digitais da UERN e dialoga com a reformulação curricular em curso na Licenciatura em Matemática do Campus Avançado de Patu.</p>
+  <p>A investigação alinha-se ao <strong>Objetivo de Desenvolvimento Sustentável 4 (Educação de Qualidade)</strong>, contribuindo particularmente para a qualificação docente. Vincula-se à agenda de pesquisa do <a href="../#inicio">Grupo Interdisciplinar de Desenvolvimento de Inteligência Artificial e Competências Digitais (GIDIAC)</a> e dialoga com a reformulação curricular em curso na Licenciatura em Matemática do Campus Avançado de Patu.</p>
 
   <div class="conceito-grid">
-    <div class="conceito">
-      <h4>Área de concentração</h4>
-      <p>Ciências Exatas e Tecnológicas, com aderência à Educação Matemática.</p>
-    </div>
-    <div class="conceito">
-      <h4>Vigência</h4>
-      <p>1º de setembro de 2026 a 31 de agosto de 2027 (12 meses).</p>
-    </div>
-    <div class="conceito">
-      <h4>Vinculação</h4>
-      <p>Edital PIBIC nº 001/2026-PROPEG/UERN.</p>
-    </div>
-    <div class="conceito">
-      <h4>Modalidade</h4>
-      <p>Iniciação científica com 1 plano de trabalho, dedicação de 12h semanais.</p>
-    </div>
+    <div class="conceito"><h4>Área de concentração</h4><p>Ciências Exatas e Tecnológicas, com aderência à Educação Matemática.</p></div>
+    <div class="conceito"><h4>Vigência</h4><p>1º de setembro de 2026 a 31 de agosto de 2027 (12 meses).</p></div>
+    <div class="conceito"><h4>Vinculação</h4><p>Edital PIBIC nº 001/2026-PROPEG/UERN.</p></div>
+    <div class="conceito"><h4>Modalidade</h4><p>Iniciação científica com 1 plano de trabalho, dedicação de 12h semanais.</p></div>
   </div>
 </section>
 
 <section id="problema">
   <h2>O problema investigado</h2>
-
   <p>A emergência de agentes de IA — sistemas dotados de autonomia, planejamento e uso de ferramentas para alcançar objetivos — introduz diferença qualitativa no cenário das tecnologias digitais em Educação Matemática. Referenciais consolidados foram desenvolvidos para artefatos determinísticos (softwares de geometria dinâmica, sistemas algébricos); agentes de IA operam com autonomia decisória, adaptação contextual e capacidade de assumir múltiplas funções pedagógicas simultâneas.</p>
-
   <p>A Base Nacional Comum para a Formação Inicial de Professores (BNC-Formação), instituída pela Resolução CNE/CP nº 02/2019, exige que futuros docentes utilizem tecnologias digitais de forma crítica e ética. A formulação, contudo, antecede o ciclo da IA generativa (2022 em diante) e não contempla especificidades dos agentes de IA como dispositivos de mediação.</p>
-
-  <div class="destaque-frase">
-    Quais dimensões analíticas e pedagógicas estruturam um framework para a compreensão crítica de agentes de Inteligência Artificial como dispositivos de mediação na formação inicial de professores de Matemática?
-  </div>
-
+  <div class="destaque-frase">Quais dimensões analíticas e pedagógicas estruturam um framework para a compreensão crítica de agentes de Inteligência Artificial como dispositivos de mediação na formação inicial de professores de Matemática?</div>
   <h3>Lacunas que a pesquisa busca preencher</h3>
   <ul>
     <li><strong>Lacuna teórica:</strong> escassez de estudos que articulem fundamentos da Ciência da Computação (teoria de agentes) com referenciais de mediação pedagógica e didática da Matemática.</li>
@@ -389,293 +178,138 @@
 
 <section id="conceitos">
   <h2>Conceitos-chave: delimitação necessária</h2>
-
   <p>A literatura sobre IA na educação opera frequentemente com confusão terminológica entre quatro categorias distintas. A pesquisa parte de delimitação rigorosa, fundamentada em Russell e Norvig (2021) e Wooldridge (2009).</p>
-
   <div class="conceito-grid">
-    <div class="conceito">
-      <h4>Ferramenta digital</h4>
-      <p>Artefato passivo, com comportamento determinístico. O usuário aciona, o artefato responde de modo previsível. Ex.: GeoGebra, editores de texto.</p>
-    </div>
-    <div class="conceito">
-      <h4>Sistema de IA</h4>
-      <p>Sistema computacional baseado em aprendizado de máquina, capaz de reconhecer padrões e realizar predições, sem necessariamente exibir agência.</p>
-    </div>
-    <div class="conceito">
-      <h4>IA generativa</h4>
-      <p>Subclasse de sistemas de IA capazes de gerar conteúdo (texto, imagem, código) a partir de prompts. Ex.: modelos de linguagem de larga escala.</p>
-    </div>
-    <div class="conceito">
-      <h4>Agente de IA</h4>
-      <p>Sistema dotado de autonomia, percepção do ambiente, planejamento e capacidade de ação orientada a objetivos. Frequentemente combina IA generativa com uso de ferramentas externas e memória persistente.</p>
-    </div>
+    <div class="conceito"><h4>Ferramenta digital</h4><p>Artefato passivo, com comportamento determinístico. Ex.: GeoGebra, editores de texto.</p></div>
+    <div class="conceito"><h4>Sistema de IA</h4><p>Sistema computacional baseado em aprendizado de máquina, sem necessariamente exibir agência.</p></div>
+    <div class="conceito"><h4>IA generativa</h4><p>Subclasse de sistemas de IA capazes de gerar conteúdo a partir de prompts.</p></div>
+    <div class="conceito"><h4>Agente de IA</h4><p>Sistema dotado de autonomia, percepção, planejamento e capacidade de ação orientada a objetivos.</p></div>
   </div>
-
   <p>O <strong>agente de IA</strong> é o objeto central do projeto. As demais categorias entram como referência para diferenciação analítica.</p>
 </section>
 
 <section id="metodologia">
   <h2>Como a pesquisa será conduzida</h2>
-
   <p>A investigação organiza-se em quatro etapas metodológicas articuladas, todas conduzidas sobre literatura e documentos, sem trabalho de campo.</p>
-
   <h3>Etapa 1 — Revisão de escopo (PRISMA-ScR)</h3>
   <p>Revisão de escopo conduzida segundo o framework de Arksey e O'Malley (2005), refinado por Levac, Colquhoun e O'Brien (2010), e relatada conforme o protocolo PRISMA-ScR (Tricco et al., 2018). Bases: Scopus, Web of Science e ERIC. Recorte temporal: 2015–2026. Idiomas: português, inglês e espanhol.</p>
-
   <h3>Etapa 2 — Análise temática</h3>
-  <p>Análise temática segundo o protocolo de Braun e Clarke (2006), em suas seis fases. Codificação mista: categorias <em>a priori</em> derivadas dos referenciais teóricos (autonomia, interação, feedback, adaptação, personalização, intencionalidade pedagógica, mediação, agência docente, transparência, ética, confiabilidade e relação com o conhecimento matemático) e categorias emergentes do corpus.</p>
-
+  <p>Análise temática segundo o protocolo de Braun e Clarke (2006), em suas seis fases. Codificação mista: categorias <em>a priori</em> (autonomia, interação, feedback, adaptação, personalização, intencionalidade pedagógica, mediação, agência docente, transparência, ética, confiabilidade e relação com o conhecimento matemático) e categorias emergentes do corpus.</p>
   <h3>Etapa 3 — Construção iterativa do framework</h3>
-  <p>Construção do framework em três movimentos: (i) identificação de dimensões; (ii) articulação entre dimensões em estrutura coerente; (iii) operacionalização mediante definição, indicadores observáveis, perguntas críticas e implicações formativas. Cinco critérios de validação interna orientam o processo: coerência, completude, parcimônia, ancoragem teórica e utilidade pedagógica.</p>
-
+  <p>Construção em três movimentos: (i) identificação de dimensões; (ii) articulação entre dimensões em estrutura coerente; (iii) operacionalização mediante definição, indicadores observáveis, perguntas críticas e implicações formativas. Cinco critérios de validação interna: coerência, completude, parcimônia, ancoragem teórica e utilidade pedagógica.</p>
   <h3>Etapa 4 — Análise de implicações formativas</h3>
   <p>Articulação do framework com a competência 5 da BNC-Formação, o AI Competency Framework for Teachers (UNESCO, 2024), a orquestração instrumental (Trouche, 2004; Drijvers, 2015) e as fases das tecnologias digitais em Educação Matemática (Borba, Silva & Gadanidis, 2018). Produção de diretrizes pedagógicas.</p>
 </section>
 
 <section id="etapas">
   <h2>Cronograma em síntese</h2>
-
-  <p>As 12 atividades do plano de trabalho distribuem-se ao longo dos 12 meses de vigência.</p>
-
+  <p>As atividades do plano de trabalho distribuem-se ao longo dos 12 meses de vigência.</p>
   <div class="grid-etapas">
-    <div class="etapa">
-      <div class="numero">Fase 1</div>
-      <h4>Capacitação metodológica</h4>
-      <p>Estudo dos protocolos PRISMA-ScR e da análise temática. Definição de descritores e strings booleanas.</p>
-      <div class="periodo">setembro – outubro/2026</div>
-    </div>
-    <div class="etapa">
-      <div class="numero">Fase 2</div>
-      <h4>Buscas e triagem</h4>
-      <p>Execução das buscas nas bases indexadas, exportação para Zotero, triagem por título e resumo, avaliação de elegibilidade.</p>
-      <div class="periodo">outubro – dezembro/2026</div>
-    </div>
-    <div class="etapa">
-      <div class="numero">Fase 3</div>
-      <h4>Extração e análise temática</h4>
-      <p>Preenchimento da matriz de extração; seis fases da análise temática com dupla codificação.</p>
-      <div class="periodo">dezembro/2026 – março/2027</div>
-    </div>
-    <div class="etapa">
-      <div class="numero">Fase 4</div>
-      <h4>Construção do framework</h4>
-      <p>Identificação de dimensões, articulação e operacionalização. Aplicação dos critérios de validação interna.</p>
-      <div class="periodo">março – maio/2027</div>
-    </div>
-    <div class="etapa">
-      <div class="numero">Fase 5</div>
-      <h4>Sistematização e diretrizes</h4>
-      <p>Elaboração do quadro de indicadores e das diretrizes pedagógicas.</p>
-      <div class="periodo">maio – junho/2027</div>
-    </div>
-    <div class="etapa">
-      <div class="numero">Fase 6</div>
-      <h4>Comunicação científica</h4>
-      <p>Redação do artigo científico, resumo para o Salão de Iniciação Científica e relatório final PIBIC.</p>
-      <div class="periodo">maio – agosto/2027</div>
-    </div>
+    <div class="etapa"><div class="numero">Fase 1</div><h4>Capacitação metodológica</h4><p>Estudo dos protocolos PRISMA-ScR e da análise temática.</p><div class="periodo">set – out/2026</div></div>
+    <div class="etapa"><div class="numero">Fase 2</div><h4>Buscas e triagem</h4><p>Execução das buscas, triagem e avaliação de elegibilidade.</p><div class="periodo">out – dez/2026</div></div>
+    <div class="etapa"><div class="numero">Fase 3</div><h4>Extração e análise temática</h4><p>Matriz de extração; seis fases da análise temática.</p><div class="periodo">dez/2026 – mar/2027</div></div>
+    <div class="etapa"><div class="numero">Fase 4</div><h4>Construção do framework</h4><p>Identificação, articulação e operacionalização de dimensões.</p><div class="periodo">mar – mai/2027</div></div>
+    <div class="etapa"><div class="numero">Fase 5</div><h4>Sistematização e diretrizes</h4><p>Quadro de indicadores e diretrizes pedagógicas.</p><div class="periodo">mai – jun/2027</div></div>
+    <div class="etapa"><div class="numero">Fase 6</div><h4>Comunicação científica</h4><p>Artigo, resumo para o Salão de IC e relatório final.</p><div class="periodo">mai – ago/2027</div></div>
   </div>
-
-  <div class="card-info">
-    <p><strong>Pontos de controle:</strong> reuniões bimensais entre orientador e bolsista para acompanhamento das atividades, ajustes de cronograma e validação de produtos parciais. Portfólio digital de pesquisa mantido pelo bolsista ao longo dos 12 meses.</p>
-  </div>
+  <div class="card-info"><p><strong>Pontos de controle:</strong> reuniões bimensais entre orientador e bolsista para acompanhamento das atividades e validação de produtos parciais.</p></div>
 </section>
 
 <section id="bolsista">
   <h2>Papel do bolsista</h2>
-
-  <p>A bolsa de iniciação científica é, antes de tudo, oportunidade formativa. O bolsista atua como pesquisador em formação, com responsabilidades específicas em cada etapa do projeto. Detalham-se abaixo os papéis, competências desenvolvidas e responsabilidades operacionais.</p>
-
+  <p>A bolsa de iniciação científica é, antes de tudo, oportunidade formativa. Detalham-se abaixo os papéis, competências desenvolvidas e responsabilidades operacionais.</p>
   <h3>Perfil desejado</h3>
   <ul>
-    <li>Discente regularmente matriculado em curso de graduação, preferencialmente Licenciatura em Matemática, Computação ou áreas afins.</li>
-    <li>Interesse pelo campo da Educação Matemática, tecnologias digitais e/ou Inteligência Artificial.</li>
-    <li>Disponibilidade de <strong>12 horas semanais</strong> para atividades de pesquisa.</li>
-    <li>Capacidade de leitura em português e inglês (leitura em espanhol desejável).</li>
-    <li>Currículo Lattes cadastrado.</li>
-    <li>Sem vínculo empregatício ou outra bolsa concorrente, conforme item 6.5 do edital.</li>
+    <li>Discente regularmente matriculado em graduação, preferencialmente Licenciatura em Matemática, Computação ou áreas afins.</li>
+    <li>Interesse em Educação Matemática, tecnologias digitais e/ou Inteligência Artificial.</li>
+    <li>Disponibilidade de <strong>12 horas semanais</strong>.</li>
+    <li>Leitura em português e inglês (espanhol desejável).</li>
+    <li>Currículo Lattes cadastrado; sem vínculo empregatício ou outra bolsa concorrente.</li>
   </ul>
-
   <h3>Responsabilidades operacionais</h3>
+  <div class="papel"><div class="icone">1</div><div class="desc"><h4>Executar a revisão de escopo</h4><p>Aplicar strings booleanas, exportar registros, conduzir triagem em quatro estágios e produzir fluxograma PRISMA-ScR.</p></div></div>
+  <div class="papel"><div class="icone">2</div><div class="desc"><h4>Preencher matriz de extração</h4><p>Registrar dados bibliográficos, referencial teórico e categorias de cada texto do corpus.</p></div></div>
+  <div class="papel"><div class="icone">3</div><div class="desc"><h4>Conduzir a análise temática</h4><p>Aplicar as seis fases de Braun e Clarke; participar de dupla codificação com o orientador.</p></div></div>
+  <div class="papel"><div class="icone">4</div><div class="desc"><h4>Colaborar na construção do framework</h4><p>Contribuir para identificação, articulação e operacionalização das dimensões.</p></div></div>
+  <div class="papel"><div class="icone">5</div><div class="desc"><h4>Produzir comunicação científica</h4><p>Colaborar na redação do artigo, resumo e relatório; apresentar no Salão de IC.</p></div></div>
 
-  <div class="papel">
-    <div class="icone">1</div>
-    <div class="desc">
-      <h4>Executar a revisão de escopo</h4>
-      <p>Aplicar strings booleanas nas bases Scopus, Web of Science e ERIC. Exportar registros para Zotero. Conduzir triagem em quatro estágios: identificação, título e resumo, elegibilidade, inclusão final. Produzir fluxograma PRISMA-ScR.</p>
-    </div>
-  </div>
-
-  <div class="papel">
-    <div class="icone">2</div>
-    <div class="desc">
-      <h4>Preencher matriz de extração</h4>
-      <p>Registrar dados bibliográficos, referencial teórico, definição operacional de agente, categorias propostas, funções educacionais e discussão sobre formação docente em cada texto do corpus.</p>
-    </div>
-  </div>
-
-  <div class="papel">
-    <div class="icone">3</div>
-    <div class="desc">
-      <h4>Conduzir a análise temática</h4>
-      <p>Aplicar as seis fases do protocolo de Braun e Clarke (2006). Operar software de análise qualitativa. Participar de dupla codificação com o orientador para verificação de confiabilidade. Refinar iterativamente o livro de códigos.</p>
-    </div>
-  </div>
-
-  <div class="papel">
-    <div class="icone">4</div>
-    <div class="desc">
-      <h4>Colaborar na construção do framework</h4>
-      <p>Contribuir para a identificação de dimensões, articulação e operacionalização. Aplicar critérios de validação interna. O bolsista não trabalha isoladamente nesta etapa: trata-se de construção colaborativa com o orientador, com discussão sistemática.</p>
-    </div>
-  </div>
-
-  <div class="papel">
-    <div class="icone">5</div>
-    <div class="desc">
-      <h4>Produzir comunicação científica</h4>
-      <p>Colaborar na redação de artigo científico, do resumo expandido para o Salão de Iniciação Científica e do relatório final PIBIC. Apresentar oralmente os resultados no Salão, conforme requisito do edital.</p>
-    </div>
-  </div>
-
-  <h3>Habilidades desenvolvidas ao longo dos 12 meses</h3>
-
+  <h3>Habilidades desenvolvidas</h3>
   <table>
-    <thead>
-      <tr>
-        <th style="width:28%">Eixo</th>
-        <th>Habilidades específicas</th>
-      </tr>
-    </thead>
+    <thead><tr><th style="width:28%">Eixo</th><th>Habilidades específicas</th></tr></thead>
     <tbody>
-      <tr>
-        <td><strong>Técnico-científicas</strong></td>
-        <td>Condução de revisão de escopo segundo PRISMA-ScR; construção de strings booleanas; gerenciamento de referências em Zotero; produção de fluxograma metodológico.</td>
-      </tr>
-      <tr>
-        <td><strong>Análise qualitativa</strong></td>
-        <td>Codificação aberta e estruturada; construção de livro de códigos; operação de software de análise qualitativa; produção de mapa temático e relatório analítico.</td>
-      </tr>
-      <tr>
-        <td><strong>Conceituais</strong></td>
-        <td>Compreensão crítica das distinções entre ferramenta digital, sistema de IA, IA generativa e agente de IA; domínio de referenciais de mediação pedagógica e didática da Matemática.</td>
-      </tr>
-      <tr>
-        <td><strong>Produção científica</strong></td>
-        <td>Redação de artigo científico segundo normas ABNT; elaboração de resumo expandido e relatório técnico; apresentação oral em evento científico.</td>
-      </tr>
-      <tr>
-        <td><strong>Transversais</strong></td>
-        <td>Leitura crítica em três idiomas; autonomia de gestão de tempo; competência ética em pesquisa; capacidade colaborativa; pensamento analítico aplicado.</td>
-      </tr>
+      <tr><td><strong>Técnico-científicas</strong></td><td>Revisão de escopo PRISMA-ScR; strings booleanas; gerenciamento de referências.</td></tr>
+      <tr><td><strong>Análise qualitativa</strong></td><td>Codificação estruturada; livro de códigos; mapa temático.</td></tr>
+      <tr><td><strong>Conceituais</strong></td><td>Distinções entre ferramenta digital, sistema de IA, IA generativa e agente de IA.</td></tr>
+      <tr><td><strong>Produção científica</strong></td><td>Redação ABNT; resumo expandido; apresentação oral.</td></tr>
+      <tr><td><strong>Transversais</strong></td><td>Leitura crítica multilíngue; gestão de tempo; ética em pesquisa.</td></tr>
     </tbody>
   </table>
 
   <h3>O que o bolsista não fará</h3>
-
   <div class="card-alerta">
-    <p>Delimitação clara evita expectativas equivocadas. <strong>O bolsista não:</strong></p>
+    <p><strong>O bolsista não:</strong></p>
     <ul style="margin-top:.6rem">
-      <li>coletará dados com sujeitos humanos (professores, estudantes) — o projeto é integralmente teórico-analítico;</li>
-      <li>desenvolverá software ou sistema de IA — a pesquisa opera sobre a literatura, não sobre construção tecnológica;</li>
-      <li>aplicará questionários, entrevistas ou observações — vedado pelo desenho metodológico;</li>
-      <li>trabalhará isoladamente — todas as etapas envolvem interação sistemática com o orientador em pontos de controle bimensais.</li>
+      <li>coletará dados com sujeitos humanos;</li>
+      <li>desenvolverá software ou sistema de IA;</li>
+      <li>aplicará questionários, entrevistas ou observações;</li>
+      <li>trabalhará isoladamente — interação sistemática com o orientador em pontos de controle bimensais.</li>
     </ul>
   </div>
 </section>
 
 <section id="produtos">
   <h2>Produtos esperados</h2>
-
-  <p>Ao final dos 12 meses, o projeto entregará seis produtos verificáveis.</p>
-
   <ul>
-    <li><strong>Framework analítico-pedagógico</strong> de agentes de IA aplicável à Educação Matemática, com dimensões fundamentadas e indicadores operacionais.</li>
-    <li><strong>Quadro de dimensões e indicadores observáveis</strong> para análise de agentes educacionais.</li>
+    <li><strong>Framework analítico-pedagógico</strong> de agentes de IA aplicável à Educação Matemática.</li>
+    <li><strong>Quadro de dimensões e indicadores observáveis.</strong></li>
     <li><strong>Diretrizes pedagógicas</strong> para uso crítico de agentes de IA na formação inicial docente.</li>
-    <li><strong>Artigo científico</strong> submetido a periódico indexado da área de Educação Matemática ou Tecnologia Educacional.</li>
-    <li><strong>Resumo expandido</strong> para apresentação no Salão de Iniciação Científica da UERN.</li>
-    <li><strong>Relatório final PIBIC</strong> conforme padrão exigido pela PROPEG/UERN.</li>
+    <li><strong>Artigo científico</strong> submetido a periódico indexado.</li>
+    <li><strong>Resumo expandido</strong> para o Salão de Iniciação Científica da UERN.</li>
+    <li><strong>Relatório final PIBIC.</strong></li>
   </ul>
 </section>
 
 <section id="horizonte">
   <h2>Horizonte da agenda de pesquisa</h2>
-
   <p>O framework construído neste PIBIC terá validade teórica ancorada em revisão e análise sistemáticas da literatura. Constitui contribuição autônoma e completa dentro do escopo de 12 meses.</p>
-
-  <p>Compõe, contudo, agenda de pesquisa mais ampla do orientador, com desdobramentos previstos em projetos subsequentes:</p>
-
+  <p>Compõe, contudo, agenda de pesquisa mais ampla do <a href="../#inicio">GIDIAC</a>, com desdobramentos previstos em projetos subsequentes:</p>
   <ul>
     <li><strong>Validação por especialistas</strong> mediante técnica Delphi modificada, em projeto subsequente com submissão a Comitê de Ética em Pesquisa.</li>
-    <li><strong>Aplicação em contextos formativos reais</strong>, com integração do framework em componente curricular da Licenciatura em Matemática do CAP/UERN.</li>
-    <li><strong>Articulação com políticas institucionais</strong> de uso de IA no ensino superior, em diálogo com a proposta de grupo de trabalho institucional na UERN.</li>
+    <li><strong>Aplicação em contextos formativos reais</strong>, com integração em componente curricular da Licenciatura em Matemática do CAP/UERN.</li>
+    <li><strong>Articulação com políticas institucionais</strong> de uso de IA no ensino superior.</li>
   </ul>
-
-  <p>Este horizonte sinaliza que a iniciação científica do bolsista se inscreve em programa de pesquisa consistente, com possibilidades de continuidade em nível de mestrado ou em projetos futuros do grupo de pesquisa.</p>
 </section>
 
 <section id="contato">
   <h2>Informações de contato e vinculação</h2>
-
   <div class="card-info">
     <p><strong>Orientador:</strong> Prof. Dr. Roberto Mariano de Araújo Filho</p>
     <p><strong>Departamento:</strong> Departamento de Matemática e Estatística — DME/CAP/UERN</p>
-    <p><strong>Grupo de pesquisa:</strong> Grupo Interdisciplinar de Desenvolvimento de Inteligência Artificial e Competências Digitais</p>
+    <p><strong>Grupo de pesquisa:</strong> <a href="../#inicio">GIDIAC — Grupo Interdisciplinar de Desenvolvimento de Inteligência Artificial e Competências Digitais</a></p>
     <p><strong>Programa:</strong> PIBIC — Edital nº 001/2026-PROPEG/UERN</p>
   </div>
-
-  <p>Discentes interessados em concorrer ao plano de trabalho devem entrar em contato via e-mail institucional para agendamento de conversa preliminar. Serão priorizados critérios de compatibilidade com o perfil desejado, disponibilidade de horário e aderência à agenda temática.</p>
+  <p>Discentes interessados em concorrer ao plano de trabalho devem entrar em contato via e-mail institucional para agendamento de conversa preliminar.</p>
 </section>
 
 </main>
 
 <script>
-  // Destaque da seção ativa na navegação durante scroll
   const secoes = document.querySelectorAll('section[id]');
   const linksNav = document.querySelectorAll('nav.lateral-nav a.link-nav');
-
   function atualizarNav(){
-    const offsetGeral = 60;
-    let atual = '';
-    secoes.forEach(s=>{
-      const topo = s.offsetTop - offsetGeral;
-      if(window.scrollY >= topo){
-        atual = s.getAttribute('id');
-      }
-    });
-    linksNav.forEach(a=>{
-      a.classList.remove('ativo');
-      if(a.getAttribute('href') === '#' + atual){
-        a.classList.add('ativo');
-      }
-    });
+    const offsetGeral = 60; let atual = '';
+    secoes.forEach(s=>{ if(window.scrollY >= s.offsetTop - offsetGeral){ atual = s.getAttribute('id'); } });
+    linksNav.forEach(a=>{ a.classList.remove('ativo'); if(a.getAttribute('href') === '#' + atual){ a.classList.add('ativo'); } });
   }
   window.addEventListener('scroll', atualizarNav);
   atualizarNav();
 
-  // Menu mobile
   const btnMenu = document.getElementById('btnMenu');
   const lateral = document.getElementById('lateral');
   const overlay = document.getElementById('overlayMobile');
-
-  btnMenu.addEventListener('click', ()=>{
-    lateral.classList.add('aberta');
-    overlay.classList.add('visivel');
-  });
-  overlay.addEventListener('click', ()=>{
-    lateral.classList.remove('aberta');
-    overlay.classList.remove('visivel');
-  });
-  // Fecha ao clicar em link no mobile
-  linksNav.forEach(a=>{
-    a.addEventListener('click', ()=>{
-      if(window.innerWidth <= 900){
-        lateral.classList.remove('aberta');
-        overlay.classList.remove('visivel');
-      }
-    });
-  });
+  btnMenu.addEventListener('click', ()=>{ lateral.classList.add('aberta'); overlay.classList.add('visivel'); });
+  overlay.addEventListener('click', ()=>{ lateral.classList.remove('aberta'); overlay.classList.remove('visivel'); });
+  linksNav.forEach(a=>{ a.addEventListener('click', ()=>{ if(window.innerWidth <= 900){ lateral.classList.remove('aberta'); overlay.classList.remove('visivel'); } }); });
 </script>
 
 </body>
